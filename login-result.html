@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login Result</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div style="background:#fff; padding:25px; border-radius:6px; width:320px; margin:auto; margin-top:100px; box-shadow:0 4px 10px rgba(0,0,0,0.1);">
+    <h2>Login Successful</h2>
+
+    <p><strong>Welcome,</strong> <span id="username"></span></p>
+
+    <a href="index.html">⬅ Back to Login</a>
+</div>
+
+<script>
+    // Read username from URL query string
+    const params = new URLSearchParams(window.location.search);
+    const username = params.get("username");
+
+    document.getElementById("username").textContent = username || "Guest";
+</script>
+
+</body>
+</html>
